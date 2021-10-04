@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop">
+
+	<!-- 카테고리별로 검색하는 기능 -->
+  <select id="c_search" resultType="mybatis.vo.ProductVO" parameterType="String">
+    select * from shop_t
+    WHERE category = #{no}
+  </select>
+</mapper>
